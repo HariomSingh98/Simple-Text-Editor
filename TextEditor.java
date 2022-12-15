@@ -25,12 +25,11 @@ public class TextEditor implements ActionListener {
     TextEditor() {
         frame = new JFrame("Text Editor");
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setLayout(null);
-        frame.setBounds(0, 0, 650, 800);
-        //intialising textArea
+         frame.setSize( 650, 800);
+        //intialising textArea and adding it
         textArea = new JTextArea("Welcome to Text Editor");
-        textArea.setBounds(0, 0, 650, 800);
-        frame.add(textArea);//added to the frame
+        scrollPane = new JScrollPane(textArea, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        frame.add(scrollPane);
 
         menuBar = new JMenuBar();
          //add menu  in the menu bar
